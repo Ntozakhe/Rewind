@@ -2,7 +2,7 @@
 <html lang="en" class="h-100">
 
 <head>
-    <title>App Name: A Coding Project By Kenny Ntozakhe</title>
+    <title>REWIND: A Coding Project By Kenny Ntozakhe</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -12,15 +12,15 @@
         integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/5db21ba9c6.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/site.css">
-    <link rel="icon" type="img/png" href="/img/icon white.png">
+    <link rel="icon" type="img/png" href="/img/rewind icon.png">
 </head>
 
 <body class="d-flex flex-column h-100">
     <!-- Nav Section-->
     <nav class="navbar navbar-expand-md navbar-dark fixed-top ">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#"><img src="/img/favicon-32x32.png" alt="logo" class="d-inline-block"
-                    width="30" height="24"> Kenny Ntozakhe</a>
+            <a class="navbar-brand" href="/index.html"><img src="/img/rewind icon.png" alt="logo" class="d-inline-block"
+                    width="30" height="24"> Rewind</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
                 aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -28,7 +28,7 @@
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="navbar-nav me-auto mb-2 mb-md-0">
                     <li class="nav-item">
-                        <a class="nav-link "  href="/index.html" id="effect">Home</a>
+                        <a class="nav-link " href="/index.html" id="effect">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="/app.html" id="effect">The App</a>
@@ -38,7 +38,8 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" target="_blank" href="#" id="effect">Git Repo</a>
+                        <a class="nav-link" target="_blank" href="https://github.com/Ntozakhe/Rewind" id="effect">Git
+                            Repo</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" target="_blank" href="#" id="effect">About</a>
@@ -50,8 +51,34 @@
 
     <!-- Main Section-->
     <main class="flex-shrink-0">
-        <div class="container">
+        <div class="container mt-5">
+            <div class="row row-cols-1 row-cols-lg-2">
+                <div class="col">
+                    <h1 class="display-5 fw-bold lh-1 mb-3">REWIND: A Coding Project</h1>
+                    <h4 class="lead">JavaScript coding excercise using arrays. Write a program that displays a string in
+                        reverse.</h4>
+                </div>
+                <div class="col">
+                    <h6 class="border-bottom border-danger ">Enter a String to Reverse</h6>
+                    <form class="row">
+                        <div class="col">
+                            <input type="text" id="reverseInputID" class="form-control" placeholder="Enter a String"
+                                aria-label="Enter a String">
+                        </div>
+                        <div class="col-12 ">
+                            <button type="button" class="btn btn-danger" id="reverseBtnID">Reverse Me</button>
+                        </div>
+                        <div class="alert alert-danger mt-5 invisible fade show" id="alertID" role="alert">
+                            <h4 class="alert-heading">Well Done</h4>
+                            <hr>
+                            <p class="mb-0" id="message">
+                                <!--Message from JS-->
+                            </p>
+                        
+                    </form>
 
+                </div>
+            </div>
         </div>
     </main>
 
@@ -90,6 +117,9 @@
         integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
     </script>
     <script src="/js/site.js"></script>
+    <script >
+        document.getElementById("reverseBtnID").addEventListener("click",getValue);
+    </script>
 </body>
 
 </html>

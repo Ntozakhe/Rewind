@@ -1,6 +1,6 @@
 :root {
-    --primary-color: #1d5888;
-    --secondary-color: #ff993b;
+    --primary-color: #000000;
+    --secondary-color: #ff0000;
     --dark-color: #292929;
     --white-color: #dff3e4;
 
@@ -43,9 +43,13 @@ h1,
 h2,
 h3,
 h4,
-h5,
+
 h6 {
     color: var(--primary-color);
+}
+
+h5{
+    color: #ff5e00;
 }
 
 .checklist>li i {
