@@ -60,8 +60,38 @@
                 <div class="col-lg-8 order-last order-lg-first">
                     <pre class="line-numbers">
                         <code class="language-javascript">
-                            function HelloWorld(){
-                                alert("Hello World");
+                            //Get the string from the page
+                            //controller function
+                            function getValue() {
+                                document.querySelector('#alert').classList.add('invisible');
+                                let userString = document.querySelector('#userString').value;
+                            
+                                let revString = reverseString(userString);
+                            
+                                displayString(revString);
+                            
+                            }
+                            
+                            //Reverse the String
+                            //Logic function
+                            function reverseString(userString) {
+                            let revString =[];
+                            
+                            //reverse a string using a for loop
+                            for(let i = userString.length -1; i >= 0; i--){
+                                revString += userString[i];
+                            }
+                            return revString;
+                            }
+                            //Display our reversed string tp the user.
+                            //View Function
+                            function displayString(revString) {
+                               //write to the page
+                            document.querySelector('#msg').innerHTML = `Your string reversed is: <strong>${revString}</strong>`;
+                            
+                            //show the alert box
+                            document.querySelector('#alert').classList.remove('invisible');
+                            
                             }
                             
                         </code>
@@ -69,8 +99,18 @@
                 </div>
                 <div class="col-lg-4">
                     <p>The Code is structured in THREE functions</p>
-                    <h5>Hello World</h5>
-                    <p>Hello World is a function that displays a message of "Hellow World"</p>
+                    <h5 class="lead">getValues()</h5>
+                    <p>
+                        getValues begins by checking that an alert is set to <strong>invisible</strong>. Utilizing <strong>querySelector</strong>, getValue pulls the user input from the page and stores it in the <strong>userString</strong> variable. The userString value is passed to the <strong>reverseString</strong> function. The function reverseString returns an array with the reversed string which is passed to the <strong>displayString</strong> function to be displayed to the user.
+                    </p>
+                    <h5 class="lead">reverseString()</h5>
+                    <p>
+                        reverseString takes the variable <strong>revString</strong>, created in the getValues function and uses it to hold an array. A for loop is used to reverse the string stored in userString and returns the reversed string to the getValues function.
+                    </p>
+                    <h5 class="lead">displayString()</h5>
+                    <p>
+                        displayString removes the invisible designation from the alert. A template literal is used to display the reversed string in the alert box to the user.
+                    </p>                    
                 </div>
             </div>
         </div>
